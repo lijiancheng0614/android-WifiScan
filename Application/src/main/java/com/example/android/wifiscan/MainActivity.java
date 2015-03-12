@@ -9,6 +9,7 @@ import android.content.pm.PackageManager;
 import android.net.wifi.ScanResult;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -18,6 +19,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 public class MainActivity extends Activity {
     private WifiManager mWifiManager;
@@ -99,7 +101,14 @@ public class MainActivity extends Activity {
                     intent.putExtra(AccessPointActivity.EXTRAS_CAPABILITIES, result.capabilities);
                     intent.putExtra(AccessPointActivity.EXTRAS_FREQUENCY, Integer.toString(result.frequency));
                     intent.putExtra(AccessPointActivity.EXTRAS_LEVEL, Integer.toString(result.level));
-                    intent.putExtra(AccessPointActivity.EXTRAS_TIMESTAMP, Long.toString(result.timestamp));
+                    String timestamp = "";
+                    try {
+                        Date date = new Date(System.currentTimeMillis() - SystemClock.elapsedRealtime() + (result.timestamp / 1000));
+                        timestamp = date.toString();
+                    } catch (Exception e) {
+
+                    }
+                    intent.putExtra(AccessPointActivity.EXTRAS_TIMESTAMP, timestamp);
                     startActivity(intent);
                 }
             });
