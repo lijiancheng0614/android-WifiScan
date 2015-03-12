@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <string name="app_name">WifiScan</string>
+
+    <!-- Toast message -->
+    <string name="wifi_not_supported">Wi-Fi is not supported</string>
+    <string name="wifi_not_enabled">Wi-Fi is not enabled</string>
+    <string name="wifi_state_disabling">Wi-Fi is disabling</string>
+    <string name="wifi_state_disabled">Wi-Fi is disabled</string>
+    <string name="wifi_state_enabling">Wi-Fi is enabling</string>
+    <string name="wifi_state_enabled">Wi-Fi is enabled</string>
+    <string name="wifi_state_unknown">Wi-Fi is unknown</string>
+
+    <!-- Labels -->
+    <string name="label_SSID">SSID:</string>
+    <string name="label_BSSID">BSSID:</string>
+    <string name="label_capabilities">Capabilities:</string>
+    <string name="label_frequency">Frequency:</string>
+    <string name="label_rssi">RSSI:</string>
+    <string name="label_timestamp">Last updated:</string>
+    <string name="label_networks_found">%d networks found</string>
+
+    <!-- Menu items -->
+    <string name="menu_connect">Connect</string>
+    <string name="menu_disconnect">Disconnect</string>
+    <string name="menu_scan">Scan</string>
+</resources>
