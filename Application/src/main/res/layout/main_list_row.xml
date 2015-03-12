@@ -3,22 +3,16 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/main_row_name"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="24dp" />
-
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <TextView
-            android:id="@+id/main_row_address"
+            android:id="@+id/main_row_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="12dp" />
+            android:textSize="24dp" />
 
         <TextView
             android:id="@+id/main_row_rssi"
@@ -26,6 +20,13 @@
             android:layout_height="wrap_content"
             android:layout_marginRight="12dp"
             android:gravity="right"
-            android:textSize="12dp" />
+            android:textSize="24dp" />
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/main_row_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12dp" />
+
 </LinearLayout>

@@ -69,7 +69,7 @@ public class ScanResultsAdapter extends BaseAdapter {
         ScanResult result = mResultList.get(position);
         viewHolder.apName.setText(result.SSID);
         viewHolder.apAddress.setText(result.BSSID);
-        viewHolder.apRssi.setText(String.format("RSSI: %d", result.level));
+        viewHolder.apRssi.setText(Integer.toString(result.level));
 
         return convertView;
     }

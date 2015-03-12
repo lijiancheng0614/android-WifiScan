@@ -6,7 +6,8 @@
     <TextView
         android:id="@+id/main_text_count"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:textSize="18dp" />
 
     <ListView
         android:id="@+id/main_list"
