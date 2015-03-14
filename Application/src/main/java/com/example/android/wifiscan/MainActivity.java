@@ -8,6 +8,7 @@ import android.content.IntentFilter;
 import android.content.pm.PackageManager;
 import android.net.wifi.ScanResult;
 import android.net.wifi.WifiManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.SystemClock;
 import android.view.Menu;
@@ -103,8 +104,10 @@ public class MainActivity extends Activity {
                     intent.putExtra(AccessPointActivity.EXTRAS_LEVEL, Integer.toString(result.level));
                     String timestamp = "";
                     try {
-                        Date date = new Date(System.currentTimeMillis() - SystemClock.elapsedRealtime() + (result.timestamp / 1000));
-                        timestamp = date.toString();
+                        if (Build.VERSION.SDK_INT >= 17) {
+                            Date date = new Date(System.currentTimeMillis() - SystemClock.elapsedRealtime() + (result.timestamp / 1000));
+                            timestamp = date.toString();
+                        }
                     } catch (Exception e) {
 
                     }
